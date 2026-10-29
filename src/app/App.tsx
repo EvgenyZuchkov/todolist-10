@@ -1,10 +1,10 @@
-import './App.css'
+import styles from './App.module.css'
 import {ThemeProvider} from '@mui/material/styles'
 import {useAppSelector} from '../common/hooks/useAppSelector'
 import CssBaseline from '@mui/material/CssBaseline'
 import {selectThemeMode} from "./app-selectors.ts";
 import {getTheme} from "../common/theme/theme.ts";
-import {Header} from "@/Header.tsx";
+import {Header} from "@/common/components/Header/Header.tsx";
 import {Main} from "./Main.tsx";
 
 
@@ -15,7 +15,7 @@ export const App = () => {
 
     return (
         <ThemeProvider theme={theme}>
-            <div className={'app'}>
+            <div className={styles.app}>
                 <CssBaseline/>
                 <Header/>
                 <Main/>
